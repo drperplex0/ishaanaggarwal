@@ -114,3 +114,9 @@ body {
     background-color: #4b86b4;
 }
 
+
+.responsive-iframe {
+    width: 100%; /* Make iframe take full width of its container */
+    height: 80vh; /* 80% of the viewport height for iframe */
+    border: none; /* Remove default border around iframe */
+}
