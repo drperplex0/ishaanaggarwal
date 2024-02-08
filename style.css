@@ -1,122 +1,264 @@
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
 }
 
-.nav-menu {
-    flex: 0 0 200px; /* Adjust width as necessary */
-    background-color: #333;
-    height: 100%;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.nav-menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav-menu ul li a {
-    text-decoration: none;
+header {
+    background: url("Pictures/spacex_home_background.jpg") no-repeat center center/cover;
     color: white;
-    background-color: #2a4d69;
-    display: block;
-    padding: 10px 15px;
-    margin: 5px 0;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.nav-menu ul li a:hover {
-    background-color: #4b86b4;
-}
-
-.main-content {
-    flex-grow: 1;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
 }
 
-.name-and-pfp {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.section-header h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2em; /* Match the size with the style of your intro header */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.name-and-pfp h1 {
+
+.header-content h1 {
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Makes the font weight bold */
     margin: 0;
 }
 
-.profile-pic {
-    max-width: 100px; /* Adjust as needed */
+.header-content p {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#intro_home {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed to center the content horizontally */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    max-width: 800px; /* Or any max-width you prefer */
+    margin: 0 auto; /* This will center the .container itself within #intro_home */
+}
+
+.intro-text {
+    padding: 20px;
+    text-align: center; /* Center-align the text within .intro-text */
+}
+
+.intro-image img {
+    max-width: 100%;
     height: auto;
 }
 
 
-.quote {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 20px;
-    text-align: center;
-    font-style: italic; /* Make the quote italic */
-    opacity: 0.8; /* Optional: tone down the color to differentiate from normal text */
-    max-width: 800px; /* Adjust as necessary for layout */
-    margin: 20px auto; /* Center the quote section */
+#projects .project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.project.left .project-info { 
+    order: 2; /* Will place the info on the right */
+}
+
+.project.right .project-info { 
+    order: 1; /* Will place the info on the left */
+}
+
+.project-image img {
+    width: 48%; /* Adjust based on preference */
+    height: auto;
+}
+
+.project-info {
+    width: 48%; /* Adjust based on preference */
+    padding: 10px;
 }
 
 
 
 
 
-.about-me {
-    padding: 20px;
-    max-width: 800px; /* Adjust as necessary for layout */
-    margin: 20px auto; /* This will center the about section */
+@media (max-width: 768px) {
+    #projects .project {
+        flex-direction: column;
+    }
+
+    .project-image img, .project-info {
+        width: 100%;
+        order: unset; /* Removes the order set for larger screens */
+    }
 }
 
-.about-me h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-}
 
-.cv-section {
-    text-align: center;
-    padding: 20px;
-}
-
-.cv-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.cv-section p {
-    margin-top: 10px;
-}
-
-.cv-section a {
-    display: inline-block;
-    background-color: #2a4d69;
+footer {
+    background-color: #333; /* Dark background for footer */
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center; /* Center align footer content */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links {
+    margin-bottom: 10px; /* Space above the lower level text */
+}
+
+.footer-bottom {
+    font-size: 0.8em; /* Smaller font size for copyright text */
+    color: #58bcff;
+}
+
+
+footer a {
+    color: #ffffff; /* Color for the links */
     text-decoration: none;
-    transition: background-color 0.3s;
+    margin: 0 10px; /* Spacing between links */
 }
 
-.cv-section a:hover {
-    background-color: #4b86b4;
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer .footer-content,
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer a {
+        margin-bottom: 10px;
+    }
+}
+
+.bottom-links {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff; /* Light grey background or any color you prefer */
+    margin-bottom: 20px; /* Space above the footer */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    margin: 0 60px; /* Increased margin to space out the buttons */
+    background-color: #007bff; /* Example color */
+    color: #ffffff ;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* Larger font size for the text inside the buttons */
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+.button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
 }
 
 
-.responsive-iframe {
-    width: 100%; /* Make iframe take full width of its container */
-    height: 80vh; /* 80% of the viewport height for iframe */
-    border: none; /* Remove default border around iframe */
+
+.page-header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em; /* Adjust size to match the homepage header */
+    /* Add any additional styling that matches the homepage header */
+}
+
+.download-button-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.button {
+    padding: 15px 30px; /* Adjust to match the size of the buttons on the homepage */
+    font-size: 1.2em; /* Adjust to match the styling on the homepage */
+    /* Add any additional button styling here */
+}
+
+.resume-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+
+
+.project-intro {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Adjust gap size as needed */
+    padding: 20px;
+}
+
+.project-item {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-title {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent overlay */
+    color: white;
+    padding: 5px 0; /* Adjust padding as needed */
+}
+
+
+.container-for-page-intro {
+    display: flex;
+    justify-content: center; /* Horizontally centers the child elements */
+    height: 100vh; /* Adjust the height as needed */
 }

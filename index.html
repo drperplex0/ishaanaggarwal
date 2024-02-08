@@ -5,42 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishaan Aggarwal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <aside class="nav-menu">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+    <header>
+        <div class="header-content">
+            <h1>ISHAAN AGGARWAL</h1>
+            <p>Per aspera ad astra</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="reading-list.html">Reading List</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <!-- Social Media Links -->
-            <li><a href="https://twitter.com/drperplex" target="_blank">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/in/aggarwalishaan" target="_blank">LinkedIn</a></li>
-            <!-- Add more social links as needed -->
-            </ul>
-        </nav>
-    </aside>
-    <div class="main-content">
-        <header>
-            <div class="name-and-pfp">
-                <h1>Ishaan Aggarwal</h1>
-                <img src="images/profile-pic.jpeg" alt="Ishaan Aggarwal" class="profile-pic">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="intro_home">
+        <div class="container">
+            <div class="intro-text">
+                <h2>Welcome to My Website</h2>
+                <p>I built it to share my work, passion, and random thoughts, I hope you enjoy the ride</p>
             </div>
-        </header>
-        <section class="quote">
-            <p>"Your first inspiring quote here."</p>
-        </section>
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>
-                Write a brief summary about yourself here. This could include your interests, 
-                what you do professionally, or any personal insights you'd like to share. 
-                It's a great way for visitors to get to know you at a glance.
-            </p>
-        </section>
+            <div class="intro-image">
+                <img src="Pictures/engine_hotfire_intro_home.jpg" alt="Descriptive Alt Text">
+            </div>
+        </div>
+    </section>
+    <header class="section-header">
+        <h2>PROJECTS</h2>
+    </header>
+    <section id="projects">
+        <!-- Projects will be inserted here by the scripts.js -->
+    </section>
+    <!-- Sections for Home, Projects, Reading List, Blog, About, Contact will go here -->
+    <div class="bottom-links">
+        <a href="resume.html" class="button">Resume</a>
+        <a href="projects.html" class="button">Projects</a>
     </div>
-    <script src="script.js"></script>
+    
+      
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/aggarwalishaan" target="_blank">Linkedin</a>
+                <a href="https://twitter.com/drperplex" target="_blank">Twitter</a>
+                <span>ishaan.dhruv@gmail.com</span>
+            </div>
+            <div class="footer-bottom">
+                <span>Copyright © 2024 Ishaan Aggarwal</span>   
+            </div>
+        </div>
+    </footer>    
 </body>
+
+<script src="scripts.js"></script>
 </html>
