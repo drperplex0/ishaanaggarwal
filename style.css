@@ -330,3 +330,38 @@ img {
         max-width: 300px;
     }
 }
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project-item {
+    border: 1px solid #ccc; /* Optional: adds a border to the thumbnail */
+  }
+  
+  .project-item a {
+    text-decoration: none;
+    color: black; /* Change color as needed */
+    display: block; /* Allows the entire area to be clickable */
+  }
+  
+  .project-item img {
+    width: 100%;
+    display: block; /* Fixes spacing issues */
+  }
+  
+  .project-title {
+    text-align: center;
+    padding: 10px 0; /* Adds some spacing above and below the title */
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    #projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+  
