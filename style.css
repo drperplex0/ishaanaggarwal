@@ -331,37 +331,58 @@ img {
     }
 }
 
+/* Add or modify in style.css */
+
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    margin: 10px; /* Adds margin around each project item */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    padding-top: 100%; /* This creates a square aspect ratio */
+}
+
+.project-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.project-item:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image on hover for a subtle effect */
+}
+
+.project-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Ensures the title spans the entire width of the item */
+    background-color: rgba(0,0,0,0.7); /* Dark overlay for the text */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Adds some spacing inside the title bar */
+}
+
+/* For the grid layout */
 #projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .project-item {
-    border: 1px solid #ccc; /* Optional: adds a border to the thumbnail */
-  }
-  
-  .project-item a {
-    text-decoration: none;
-    color: black; /* Change color as needed */
-    display: block; /* Allows the entire area to be clickable */
-  }
-  
-  .project-item img {
-    width: 100%;
-    display: block; /* Fixes spacing issues */
-  }
-  
-  .project-title {
-    text-align: center;
-    padding: 10px 0; /* Adds some spacing above and below the title */
-  }
-  
-  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px)); /* Adjusts the number of columns based on screen width */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Space around the entire grid */
+}
+
+@media (max-width: 768px) {
     /* Adjustments for smaller screens */
-    #projects-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .project-item {
+        margin: 5px; /* Smaller margin for smaller screens */
     }
-  }
+    .project-item img {
+        min-height: 150px; /* Smaller minimum height for smaller screens */
+    }
+}
   
