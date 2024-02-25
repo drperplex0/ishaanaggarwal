@@ -337,9 +337,9 @@ img {
 .project-item {
     position: relative;
     overflow: hidden;
-    margin: 10px; /* Adds margin around each project item */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    padding-top: 100%; /* This creates a square aspect ratio */
+    margin: 10px;
+    box-sizing: border-box;
+    padding-top: 100%; /* Maintains square aspect ratio */
 }
 
 .project-item img {
@@ -371,18 +371,40 @@ img {
 /* For the grid layout */
 #projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 400px)); /* Adjusts the number of columns based on screen width */
-    gap: 20px; /* Space between items */
-    padding: 20px; /* Space around the entire grid */
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 25px; /* Space between items */
+    padding: 25px; /* Space around the entire grid */
+    justify-content: center; /* Centers grid items in the grid area */
+    max-width: 1000px; /* Maximum width of the grid */
+    margin: 0 auto; /* Centers the grid in its container */
 }
 
 @media (max-width: 768px) {
     /* Adjustments for smaller screens */
-    .project-item {
-        margin: 5px; /* Smaller margin for smaller screens */
+    #projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keeps two columns */
+        max-width: 600px; /* Adjust as necessary */
     }
-    .project-item img {
-        min-height: 150px; /* Smaller minimum height for smaller screens */
+
+    .project-item {
+        margin: 5px; /* Adjust as necessary */
+        width: 80%; /* Maintain the same size as in the larger breakpoint */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for even smaller screens */
+    #projects-grid {
+        grid-template-columns: 1fr; /* One column */
+        max-width: 300px; /* Adjust as necessary */
+    }
+
+    .project-item {
+        margin: 5px; /* Adjust as necessary */
+        width: 80%; /* Maintain the same size as in the larger breakpoints */
     }
 }
   
+.project-item:hover img {
+    transform: translate(-50%, -50%);
+}
