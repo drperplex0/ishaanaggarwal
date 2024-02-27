@@ -6,7 +6,6 @@ body, html {
 }
 
 header {
-    background: url("Pictures/spacex_home_background.jpg") no-repeat center center/cover;
     color: white;
     height: 70vh;
     display: flex;
@@ -15,6 +14,9 @@ header {
     flex-direction: column;
     text-align: center;
 }
+
+
+
 
 .section-header h2 {
     font-family: 'Roboto', sans-serif;
@@ -37,23 +39,28 @@ header {
     font-size: 1.5rem;
 }
 
+/* Navigation Styles */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: black;
     margin: 0;
+    background-color: #E9ECEF;
+    text-align: center;
 }
 
 nav ul li {
-    margin: 0 20px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    color: #007BFF;
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
 }
 
 #intro_home {
