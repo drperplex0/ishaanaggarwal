@@ -44,7 +44,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #E9ECEF;
+    background-color: #333;
     text-align: center;
 }
 
@@ -55,12 +55,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #fafafa;
     font-weight: 700;
 }
 
 nav ul li a:hover {
-    color: #0056b3;
+    color: #cfcfcf;
 }
 
 #intro_home {
@@ -414,4 +414,34 @@ img {
   
 .project-item:hover img {
     transform: translate(-50%, -50%);
+}
+
+section {
+    padding: 40px 0;
+    background-color: #E9ECEF; /* Slightly grayish color for section background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contact {
+    background-color: #E9ECEF; /* White background for a clean look */
+}
+
+/* You might want to add more specific styles for headings, paragraphs, and other elements within each section. */
+
+/* About Section with a unique background color */
+#about {
+    background-color: #eef1f5; /* Soft blue for a light, airy feel */
+    padding: 40px 0;
+    color: #000000; /* Dark grey for text to ensure readability */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
