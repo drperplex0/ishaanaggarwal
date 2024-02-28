@@ -461,3 +461,15 @@ section {
 .projects-background {
     background-color: #F0F8FF; /* Very light blue for a professional, airy vibe */
 }
+
+/* Styles for PDF hyperlinks in the Writing section */
+#writings a {
+    color: #000000; /* Black color for links to make them look like normal text */
+    text-decoration: none; /* Removes the underline from links */
+    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+#writings a:hover, #writings a:focus {
+    color: #0056b3; /* Lightish blue color on hover/focus to indicate interactivity */
+    text-decoration: underline; /* Adds underline on hover/focus for emphasis */
+}
