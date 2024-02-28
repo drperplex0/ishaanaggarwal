@@ -445,3 +445,19 @@ section {
     margin: 0 auto;
     padding: 20px;
 }
+
+
+/* Reading List Page Background */
+.reading-list-background {
+    background-color: #EFEFEF; /* Light grey for a subtle, clean look */
+}
+
+/* Blog Page Background */
+.blog-background {
+    background-color: #ffffff; /* Soft pink for a warm, inviting feel */
+}
+
+/* Projects Page Background */
+.projects-background {
+    background-color: #F0F8FF; /* Very light blue for a professional, airy vibe */
+}
