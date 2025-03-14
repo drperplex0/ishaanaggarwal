@@ -1,68 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8" />
-        <title>Template</title>
-        <style>
-                /* Same styles as the original home page */
-                body {
-                        margin: 0;
-                        padding: 0;
-                        font-family: Arial, sans-serif;
-                }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Updated styles based on your requirements */
+        
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            max-height: 400px;
+            object-fit: contain;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
 
-                .container {
-                        width: 100%;
-                        min-height: 100vh; 
-                        background-color: #fffefc; 
-                        padding: 20px;
-                        max-width: 800px; 
-                        margin: 0 auto; 
-                }
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
 
-                h1 {
-                        margin-top: 0;
-                        text-align: center; 
-                }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
 
-                p, ul {
-                        /* text-align: center; */
-                        margin-bottom: 20px;
-                }
+        h1 {
+            margin-top: 0;
+        }
 
-                a {
-                        color: #003cff; 
-                }
+        p, ul {
+            margin-bottom: 20px;
+        }
 
-                a:hover {
-                        color: #040bdd; 
-                }
-        </style>
+        a {
+            color: #003cff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #6495ED;
+        }
+
+        /* Navigation styles */
+        .nav-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 20%;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 90vh;
+        }
+
+        .content {
+            flex: 1;
+            width: 80%;
+            margin-left: auto;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .nav-menu li {
+            margin-bottom: 10px;
+        }
+
+        /* Menu button for mobile */
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .menu-icon {
+            display: block;
+            width: 25px;
+        }
+
+        .menu-icon span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        /* Media query for mobile */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 80%;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                height: 100%;
+                background-color: #f5f5f5;
+                padding: 80px 20px 20px;
+                transition: left 0.3s ease;
+                z-index: 90;
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .content {
+                padding-top: 40px;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-        <div class="container">
-                <!-- Replace Ishaan with your name -->
-                <h1>[Your Name]</h1>
+    <div class="container">
+        <!-- Mobile menu button -->
+        <button class="menu-button" onclick="toggleMenu()">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
 
-                <!-- Add content here, such as paragraphs, lists, etc. -->
-
-                <ul>
+        <div class="nav-container">
+            <!-- Sidebar with navigation -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-top">
+                    <ul class="nav-menu">
                         <!-- You can add links to other pages or external websites -->
                         <li><a href="[link URL]">[Link Text]</a></li>
-                </ul>
+                        <li><a href="[link URL]">[Link Text]</a></li>
+                        <li><a href="[link URL]">[Link Text]</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-bottom">
+                    <p>follow me on X: <a href="https://x.com/drperplex">@drperplex</a></p>
+                    <p>email me at: ishaan@valaratomics.com</p>
+                </div>
+            </div>
+
+            <!-- Main content area -->
+            <div class="content">
+                <div class="header">
+                    <!-- Replace with your name -->
+                    <h1 style="font-weight: 300;">[Your Name]</h1>
+                </div>
+                
+                <!-- Full width image placeholder -->
+                <img src="[path/to/your/image.jpg]" alt="Banner image" class="full-width-image">
+
+                <!-- Add content here, such as paragraphs, lists, etc. -->
+                <p>[Your introduction paragraph here]</p>
 
                 <!-- Add headings and lists as needed -->
                 <h3>[Heading 1]</h3>
                 <ul>
-                        <li>[List Item 1]</li>
-                        <li>[List Item 2]</li>
+                    <li>[List Item 1]</li>
+                    <li>[List Item 2]</li>
                 </ul>
 
                 <!-- More content can be added here -->
-
-                <p>follow me on X: <a href="https://x.com/drperplex"> @drperplex</a></p>
-                <p>email me at: ishaan@valaratomics.com</p>
-
+            </div>
         </div>
+
+        <!-- Removed footer as content moved to sidebar -->
+    </div>
+
+    <!-- JavaScript for toggling mobile menu -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
