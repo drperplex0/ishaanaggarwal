@@ -1,245 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work - Ishaan Aggarwal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Updated styles with fixes for layout issues */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1600px; /* Increased from 1200px for better use of screen space */
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            flex: 1;
-            box-sizing: border-box; /* Include padding in width calculation */
-        }
-
-        .header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        h1, h2, h3 {
-            font-weight: 300;
-        }
-
-        h1 {
-            margin-top: 0;
-            font-size: 3rem;
-        }
-
-        p, ul {
-            margin-bottom: 30px;
-            line-height: 1.7;
-            word-wrap: break-word; /* Ensure long words break */
-            overflow-wrap: break-word;
-            max-width: 100%; /* Ensure text doesn't exceed container width */
-        }
-
-        a {
-            color: #3f69c4;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #c0d4f0;
-        }
-
-        .full-width-image {
-            width: 100%;
-            height: auto;
-            margin: 20px 0;
-            max-height: 500px; /* Increased from 400px */
-            object-fit: contain;
-            max-width: 100%; /* Ensure image doesn't exceed container width */
-        }
-
-        /* Navigation styles - Improved layout */
-        /* Create a two-column layout with full-height sidebar */
-        .nav-container {
-            display: flex;
-            width: 100%;
-            flex: 1;
-            position: relative;
-            box-sizing: border-box; /* Include padding in width calculation */
-            overflow: hidden; /* Prevent horizontal scrolling */
-        }
-        
-        /* Create a pseudo-element for the sidebar background that extends full height */
-        .nav-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 15%; /* Match sidebar width */
-            height: 100%;
-            background-color: #e0e0e0;
-            z-index: 0;
-        }
-
-        .sidebar {
-            width: 15%; /* Increased from 5% for better readability */
-            padding-right: 20px; /* Increased from 5px */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            min-height: 500px; /* Minimum height */
-            text-align: center; /* Keeping center alignment as requested */
-            position: relative; /* Position above the pseudo-element */
-            z-index: 1;
-        }
-        
-        .sidebar-top {
-            padding-top: 35px;
-            width: 100%;
-        }
-
-        .content {
-            flex: 1;
-            width: 85%; /* Decreased from 95% to accommodate larger sidebar */
-            padding-left: 40px; /* Added indentation from the left menu */
-            position: relative; /* Position above the pseudo-element */
-            z-index: 1;
-            background-color: #f5f5f5; /* Explicitly set background color */
-            box-sizing: border-box; /* Include padding in width calculation */
-            overflow-wrap: break-word; /* Ensure text wraps properly */
-        }
-
-        .nav-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 30px 0; /* Increased from 15px */
-        }
-
-        .nav-menu li {
-            margin-bottom: 25px; /* Increased from 20px */
-            font-size: 1.1rem; /* Increased from 0.99rem */
-        }
-
-        /* Menu button for mobile */
-        .menu-button {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px; /* Increased from 20px */
-            cursor: pointer;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            z-index: 100;
-        }
-
-        .menu-icon {
-            display: block;
-            width: 25px; /* Increased from 22px */
-        }
-
-        .menu-icon span {
-            display: block;
-            height: 3px; /* Increased from 2px */
-            width: 100%;
-            background: #333;
-            margin: 5px 0; /* Increased from 4px */
-            border-radius: 2px;
-        }
-
-        /* Media query for mobile */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-            }
-            
-            .nav-container::before {
-                display: none; /* Hide the background pseudo-element on mobile */
-            }
-
-            .sidebar {
-                width: 50%; /* Increased from 30% */
-                position: fixed;
-                top: 0;
-                left: -100%;
-                height: 100%;
-                background-color: #e0e0e0; /* Match desktop sidebar color */
-                padding: 60px 15px 20px; /* Increased padding */
-                transition: left 0.3s ease;
-                z-index: 90;
-                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-                text-align: center; /* Keep center alignment for mobile */
-            }
-
-            .sidebar.active {
-                left: 0;
-            }
-
-            .menu-button {
-                display: block;
-            }
-
-            .content {
-                padding-top: 30px; /* Increased from 25px */
-                width: 100%;
-                margin-left: 0;
-            }
-        }
-    </style>
+    <title>Ishaan Aggarwal - Home</title>
+    <link rel="stylesheet" href="css/global.css">
 </head>
-<body>
-    <div class="container">
-        <!-- Mobile menu button -->
-        <button class="menu-button" onclick="toggleMenu()">
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
+<body class="about-page">
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
 
-        <div class="nav-container">
-            <!-- Sidebar with navigation - left aligned text for desktop -->
-            <div class="sidebar" id="sidebar">
-                <div class="sidebar-top">
-                    <ul class="nav-menu">
-                        <!-- Links from original index page -->
-                         <li>Ishaan Aggarwal</li>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="work.html">Work</a></li>
-                        <li><a href="writings.html">Writings</a></li>
-                        <li><a href="readwise.html">Readwise</a></li>
-                        <li><a href="https://x.com/drperplex">Twitter</a></li>
-                        <li><a href="mailto:ishaan@valaratomics.com">Email</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
 
             <!-- Main content area -->
-            <div class="content">
-                <div class="header">
-                    <h1>Work</h1>
+            <div class="index-page">
+                <h2 style="text-align: center;">Featured Articles</h2>
+                <div class="featured-grid">
+                    <!-- Featured Article 1 -->
+                    <a href="work.html" class="article-card">
+                        <img src="cutting ribbon.jpg" alt="Ambition" class="article-image">
+                        <div class="article-info">
+                            <h3 class="article-title">Ambition</h3>
+                            <p class="article-subtitle">To See How High Can You Fly</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Featured Article 2 -->
+                    <a href="work.html" class="article-card">
+                        <img src="WardZero front.jpg" alt="WardZero" class="article-image">
+                        <div class="article-info">
+                            <h3 class="article-title">Valar Atomics: WardZero</h3>
+                            <p class="article-subtitle">Building a Nuclear Reactor Prototype</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Featured Article 3 -->
+                    <a href="work.html" class="article-card">
+                        <img src="blackboard berkley.jpg" alt="Physics Stack" class="article-image">
+                        <div class="article-info">
+                            <h3 class="article-title">Physics Stack</h3>
+                            <p class="article-subtitle">My Knowledge Stack of Physics</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Featured Article 4 -->
+                    <a href="work.html" class="article-card">
+                        <img src="core barrel sheel.jpg" alt="Transit Plan" class="article-image">
+                        <div class="article-info">
+                            <h3 class="article-title">Transit Predictive Maintenance</h3>
+                            <p class="article-subtitle">A Plan on Improving BC's Transit Org</p>
+                        </div>
+                    </a>
                 </div>
-                
-                <!-- Content from original work page -->
-                <p>Currently working at <a href="https://www.valaratomics.com/">Valar Atomics</a></p>
-                <!-- Headings and lists from original index page -->
-                <h3>Work so far</h3>
-                <p>Rocket Engine 1 Hot Fire (Director of Proulsion)</p>
-                <p><a href="heatsink_engine.html">Heat Sink Engine</a></p>
-                <p>Rocket Engine 2 Hot Fire (Director of Proulsion)</p>
-                <p><a href="ablative_engine.html">Ablative Engine</a></p>
+            </div>
+            <!-- <main class="content">
+                <br><br>
+                <div class="work-page">
+                    <h2 style="text-align: center;">You Can Just Do Things</h2>
+                </div>               
+                Content from original work page
+                <p>Currently working at <a href="https://www.valaratomics.com/">Valar Atomics: building nuclear reactors</a></p>
+                Headings and lists from original index page
+                <h3>Projects so far</h3>
+                <p>Nuclear Reactor Pressure Vessel</p>
+                <p>Designed, manufactured and certified a nuclear reactor pressure vessel.</p>
+                <p>Nuclear Reactor Core</p>
+                <p>Designed, manufactured and assembled a nuclear graphite prismatic core</p>
+                <p>Rocket Engine 1 (Director of Proulsion)</p>
+                <p>Designed, manufactured and fired a 7kN<a href="heatsink_engine.html">Heat Sink Engine</a></p>
+                <p>Rocket Engine 2 (Director of Proulsion)</p>
+                <p>Designed, manufactured and fired a 3kN <a href="ablative_engine.html">Ablative Engine</a></p>
                 <p>Surface Materials Science: Hydrogen Embrittlement Reduction in Pipeline Steel<p>
                 <p><a href="NRC_Technical_Report.pdf">Hydrogen Embrittlement Summary Paper</a></p>
                 <p>Physics Papers: Wrote a bunch of physics papers during university</p>
@@ -251,11 +109,9 @@
                     <li><a href="Chaotic_Circuit.pdf">Chaotic Circuits Study</a></li>
                 </ul>
                 
-                <!-- Full width image from original index page -->
-                <img src="20220619_075904.jpg" alt="Banner image" class="full-width-image">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- JavaScript for toggling mobile menu -->
     <script>

@@ -185,7 +185,7 @@ h2 {
     background-clip: text;
     color: transparent;
     text-align: left;
-    font-size: 3.25rem;
+    font-size: 3.75rem;
     
     /* Metallic glossy effect */
     position: relative;
@@ -288,3 +288,76 @@ h3 {
     text-align: center;
     margin-bottom: 30px;
 }
+
+.recent-section {
+    padding: 40px 20px;
+}
+
+.recent-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Featured Articles Section */
+.featured-articles {
+    padding: 40px 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.article-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-info {
+    padding: 15px 0;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.article-subtitle {
+    font-size: 1rem;
+    color: #aab0bd;
+    margin-bottom: 10px;
+}
+
+.read-time {
+    font-size: 0.875rem;
+    color: #aab0bd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments for featured articles */
+@media (max-width: 768px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
