@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Reading List</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="reading-list-page">
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section with Fixed Size Image -->
+    <div class="hero-container">
+        <img src="sfu_library.jpg" alt="Hero Image" class="hero-image">
+        <h1 class="hero-heading">Textbook List</h1>
+    </div>
+
+    <!-- Content Area -->
+    <main class="content">
+        <br><br>
+        <h2 class="index-page">Academic Reading List</h2>
+        <p>These are the books that shaped my understanding of physics and mathematics throughout my academic journey.</p>
+        
+        <h3>The Books That Built My Foundation</h3>
+        <br>
+        
+        <p><b>Mathematics</b></p>
+        <ul>
+            <li><i>Calculus: Early Transcendentals</i> by James Stewart</li>
+            <li><i>Differential Equations and Linear Algebra</i> by Gilbert Strang</li>
+        </ul>
+        
+        <p><b>Core Physics</b></p>
+        <ul>
+            <li><i>Introduction to Electrodynamics</i> by David J. Griffiths</li>
+            <li><i>Classical Mechanics</i> by Herbert Goldstein, Charles P. Poole Jr., and John L. Safko</li>
+            <li><i>The Physics of Waves</i> by Howard Georgi
+                <ul>
+                    <li>Where my perspective on physics really changed</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><b>Quantum Mechanics</b></p>
+        <ul>
+            <li><i>Principles of Quantum Mechanics</i> by R. Shankar</li>
+            <li><i>Introduction to Quantum Mechanics</i> by David J. Griffiths</li>
+            <li><i>A Modern Approach to Quantum Mechanics</i> by John S. Townsend</li>
+        </ul>
+        
+        <p><b>Thermodynamics & Statistical Mechanics</b></p>
+        <ul>
+            <li>Thermodynamics: 3 books cause this topic go crazy
+                <ul>
+                    <li><i>Thermal Physics</i> by Ralph Baierlein</li>
+                    <li><i>Statistical Mechanics</i> by Kerson Huang (not fully thermo but has good thermo chapters)</li>
+                    <li><i>Thermodynamics: An Engineering Approach</i> by Yunus A. Çengel and Michael A. Boles</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><b>Advanced Topics</b></p>
+        <ul>
+            <li><i>Introduction to Special Relativity</i> by Robert Resnick</li>
+            <li><i>Fluid Mechanics</i> by L.D. Landau and E.M. Lifshitz</li>
+            <li><i>Solid State Physics</i> by Neil W. Ashcroft and N. David Mermin</li>
+        </ul>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

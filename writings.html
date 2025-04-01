@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="about-page">
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+            <!-- Main content area -->
+            <div class="content">
+                <div class="header">
+                    <h1>Writings</h1>
+                </div>
+                
+                <!-- Content from original writings page -->
+                <h2>Collection of writings</h2>       
+                <!-- Headings and lists from original index page -->
+                <p>Google's Nuclear Effort</p>
+                <p><a href="google_nuclear_effort.html">Google's RE focus on Nuclear</a></p>
+                <p>Translink BC's Maintenance Problem</p>
+                <p><a href="translink_predictive_maintenance_plan.html">Tranlink Predictive Maintenance Plan</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for toggling mobile menu -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Fixed Size Image -->
+    <div class="hero-container">
+        <img src="Hotfire+SP24+Teaser.jpg" alt="Hero Image" class="hero-image">
+        <h1 class="hero-heading">Ablative Engine</h1>
+    </div>
+
+    <!-- Content Area -->
+    <main class="content">
+        
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

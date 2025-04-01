@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="about-page">
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!--Heading Area-->
+
+    <!-- Content Area -->
+    <main class="content">
+        <div class="about-page">
+            <h2 style="text-align: center;">Ishaan's World</h2>
+            <!-- Recent content would go here -->
+        </div>
+        <p>Hi, I'm Ishaan Aggarwal. Current engineer at Valar Atomics, trying to split atoms</p>
+        <p>Life Locations: Delhi > Dubai > Vancouver > Los Angeles</p>
+        <p>Turned a slight obsession in physics into an Applied Physics degree from SFU. After a litte time in the academic world, decided to move to industry to build things. Currently building nuclear reactors at <a href="https://www.valaratomics.com/">Valar Atomics</a>.</p>
+        <p>Apart from work (not much else in life currently) I like to hike with friends and play ultimate frisbee or football. </p>
+        <h3>Daily Runners</h3>
+        <p>will try and keep updated</p>
+        <br>
+        <p><b>In Pocket</b></p>
+        <ul>
+            <li>Samsung S24 Ultra: maxed out samsung phone, best hardware in the game</li>
+            <li>Galaxy Buds3 Pro: best samsung phones (sensing a theme yet?)</li>
+            <li>Samsung Watch 4: samsung watch. don't wanna update just yet </li>
+        </ul>
+        <p><b>On Desk</b></p>
+        <ul>
+            <li>Surface pro 2: closest thing to tablet+computer. reaching the point of change though</li>
+            <li>MX Master 2 pro: best mouse in the game minus the micro-usb </li>
+            <li>Dell u4919dw UltraWide Monitor</li>
+            <li>Sony wh-1000xm4: big boi headphones, who tf is naming these things</li>
+        </ul>
+        <p><b>On Back</b></p>
+        <ul>
+            <li>Bange Business Backpack: goated backpack</li>
+            <li>Pilot G2 Pens: is there any other pen a sane human would use</li>
+            <li>Writable Pads: always good to have</li>
+            <li>Anker USB-C Chargers: charges everything I own</li>
+        </ul>
+        <p><b>On Line</b></p>
+        <ul>
+            <li></li>
+        </ul>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

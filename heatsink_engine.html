@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Fixed Size Image -->
+    <div class="hero-container">
+        <img src="Hotfire+SP24+Teaser.jpg" alt="Hero Image" class="hero-image">
+        <h1 class="hero-heading">Heat Sink Engine</h1>
+    </div>
+
+
+            <!-- Main content area -->
+            <div class="content">
+                <div class="header">
+                    <!-- <h1>Heat Sink Engine</h1> -->
+                </div>
+                
+                <!-- Engine Project Overview -->
+                <h3>Overview</h3>
+                <p>I was part of the SFU Rocketry team that developed and fired a 2.5kN heatsink rocket engine. In this small team, my responsibilities were broad, encompassing several critical areas of the project.</p>
+                
+                <p>My work included designing the fluid systems and structurally assembling the combustion chamber, throat, and nozzle. I managed the oxidizer and fuel delivery systems for the engine. Handling liquid oxygen (LOX) was a significant part of my role, which involved creating LOX loading procedures, procurement, and developing a safety manual. Additionally, I conducted safety training for team members involved in handling LOX.</p>
+                
+                <p>The project required applying knowledge from mechanical engineering, propulsion, chemical engineering, and general rocketry principles. The small team size meant that each member had a wide range of tasks, leading to a steep and rapid learning experience in various engineering disciplines.</p>
+                
+                <p>The culmination of our efforts was the successful firing of the engine, a direct result of the team's dedication and the practical application of our collective engineering skills. This project provided hands-on experience in rocketry while emphasizing the importance of safety, precision, and interdisciplinary collaboration.</p>
+                
+                <p>View the engine firing in action: <a href="https://www.sfurocketry.com/completed-projects/lre-gen1" target="_blank">SFU Rocketry LRE Gen-1 Video</a></p>
+                
+                <!-- Engine Images -->
+                <div class="project-images">
+                    <img src="lre gen 1.jpeg" alt="Rocket engine firing with visible flame">
+                    <img src="lre gen 1_2.png" alt="Close-up view of rocket engine">
+                </div>
+                
+                <!-- Test Stand Development -->
+                <h3>Test Stand Development</h3>
+                <p>I engaged in constructing a test stand structure designed to test and fire liquid rocket engines. This structure needed to be incredibly durable to withstand the substantial forces exerted by the engines during testing.</p>
+                
+                <p>My responsibilities covered manufacturing of piping and managing the positioning and utilization of tanks. A notable aspect was the necessity for creativity driven by budget constraints. Our team repurposed materials to fit our needs, such as adapting scuba tanks for our test stand by tapping holes and fitting them with valves to control the intake and venting of fluids.</p>
+                
+                <p>Developing a test method for filling the LOX tanks to the desired level was another challenge. We achieved this through the calibration of liquid nitrogen, a more cost-effective alternative, to ensure accurate filling.</p>
+                
+                <p>The test stand structure included:</p>
+                <ul>
+                    <li>The main test stand</li>
+                    <li>An engine mount</li>
+                    <li>A fluid piping system</li>
+                    <li>Five tanks: LOX tank, fuel tank, two pressurant tanks, and a nitrogen tank for system pressurization and purging</li>
+                </ul>
+                
+                <!-- Test Stand Images -->
+                <div class="project-images">
+                    <img src="test stand 1.jpeg" alt="Test stand setup with tanks and control system">
+                    <img src="test stand 2.png" alt="Test stand with rocket engine installed">
+                    <img src="test stand background.jpeg" alt="Another view of the test stand setup">
+                </div>
+                
+                <!-- Next-Generation Engine Mount -->
+                <h3>Next-Generation Engine Mount</h3>
+                <p>As the lead on the next-generation engine mount project, our team's goal was to create a mount that can adapt to multiple engines of varying sizes. This endeavor aimed to revolutionize how we integrate engines with our test stands and the Liquid Rocket Engine Gen-II specifically.</p>
+                
+                <p>The updated Engine Mount was designed to future-proof our testing platforms as a universal solution for all future small engines developed by SFU Rocketry. Key features included a robust universal design, adjustable supports, and a large factor of safety to ensure durability, precision, and longevity.</p>
+                
+                <p>Our work focused on engineering a mount that meets current propulsion system needs while anticipating future project requirements. The adjustable supports allow for testing a wide range of engine sizes without requiring multiple specialized mounts.</p>
+                
+                <!-- Engine Mount CAD Image -->
+                <div class="project-images">
+                    <img src="engine mount .png" alt="CAD model of the next-generation engine mount">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for toggling mobile menu -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <!-- Desktop Menu -->
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Fixed Size Image -->
+    <div class="hero-container">
+        <img src="Hotfire+SP24+Teaser.jpg" alt="Hero Image" class="hero-image">
+        <h1 class="hero-heading">Ablative Engine</h1>
+    </div>
+
+     <!-- Main content area -->
+     <div class="content">
+        <div class="header">
+            <h1>Ablative Engine</h1>
+        </div>
+        
+        <!-- Content for ablative engine page -->
+        <h2>Overview</h2>
+        <p>As the Director of Propulsion at SFU Rocketry, I led development of the Liquid Rocket Engine (LRE) Gen-II, a 3kN engine utilizing ablative cooling. This hands-on project involved designing a rocket engine from scratch with a dedicated team.</p>
+        
+        <p>We began with materials research and ablative testing, selecting MDF wood as our primary ablative material based on cost-effectiveness, burn-rate characteristics, and suitability. The design adapted our Gen-I LRE profile, incorporating new insights while maintaining familiarity for experienced team members.</p>
+        
+        <img src="Hotfire+SP24+Teaser.jpg" alt="Ablative Engine Hot Fire Test" class="full-width-image">
+        
+        <p>LRE Gen-II features a combustion chamber, throat, and nozzle made from ablative wood composite. This design focuses on efficient propulsion through innovative material use. The engine's reusability is enabled by replaceable ablative inserts, allowing continuous improvement and testing.</p>
+        
+        <img src="ablative engine.png" alt="Ablative Engine CAD Model" class="full-width-image">
+        
+        <p>A key component is the removable back injector plate, designed for quick materials and injector iteration. This feature lets us experiment with different configurations, enhancing performance and adaptability.</p>
+        
+        <img src="engine mount background.jpg" alt="Ablative Engine Test Stand Setup" class="full-width-image">
+        
+        <h3>Next-Generation Engine Mount</h3>
+        
+        <p>As the lead on the next-generation engine mount project, our team's goal was to create a mount that can adapt to multiple engines of varying sizes. This endeavor aimed to revolutionize how we integrate engines with our test stands and the Liquid Rocket Engine Gen-II specifically.</p>
+                
+        <p>The updated Engine Mount was designed to future-proof our testing platforms as a universal solution for all future small engines developed by SFU Rocketry. Key features included a robust universal design, adjustable supports, and a large factor of safety to ensure durability, precision, and longevity.</p>
+                
+        <p>Our work focused on engineering a mount that meets current propulsion system needs while anticipating future project requirements. The adjustable supports allow for testing a wide range of engine sizes without requiring multiple specialized mounts.</p>
+                
+        <!-- Engine Mount CAD Image -->
+        <div class="project-images">
+            <img src="engine mount .png" alt="CAD model of the next-generation engine mount">
+        </div>
+
+    </div>
+
+    <!-- JavaScript for toggling mobile menu -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
