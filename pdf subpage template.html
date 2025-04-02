@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Projects</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="work-page">
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html" class="active">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-container">
+        <img src="cutting ribbon.jpg" alt="Hero Image" class="hero-image">
+        <h1 class="hero-heading">My Projects</h1>
+    </div>
+
+    <!-- Content Area -->
+    <main class="content">
+        <h2>You Can Just Do Things</h2>
+        <p>Currently working at <a href="https://www.valaratomics.com/">Valar Atomics: building nuclear reactors</a></p>
+        
+        <h3>Projects</h3>
+        
+        <div class="project-item">
+            <h4>Nuclear Reactor Pressure Vessel</h4>
+            <p>Designed, manufactured and certified a nuclear reactor pressure vessel.</p>
+            <a href="pdfviewer.html?pdf=WardZero_Certification.pdf&title=Pressure Vessel Certification&desc=Technical documentation for the nuclear reactor pressure vessel design and certification.">View Documentation</a>
+        </div>
+        
+        <div class="project-item">
+            <h4>Nuclear Reactor Core</h4>
+            <p>Designed, manufactured and assembled a nuclear graphite prismatic core</p>
+            <a href="pdfviewer.html?pdf=Reactor_Core_Design.pdf&title=Reactor Core Design&desc=Technical documentation of the nuclear graphite prismatic core design and assembly.">View Documentation</a>
+        </div>
+        
+        <div class="project-item">
+            <h4>Rocket Engine 1 (Director of Propulsion)</h4>
+            <p>Designed, manufactured and fired a 7kN Heat Sink Engine</p>
+            <a href="pdfviewer.html?pdf=HeatSink_Engine.pdf&title=Heat Sink Engine&desc=Technical documentation of the 7kN heat sink engine design and test firing.">View Documentation</a>
+        </div>
+        
+        <div class="project-item">
+            <h4>Rocket Engine 2 (Director of Propulsion)</h4>
+            <p>Designed, manufactured and fired a 3kN Ablative Engine</p>
+            <a href="pdfviewer.html?pdf=Ablative_Engine.pdf&title=Ablative Engine&desc=Technical documentation of the 3kN ablative engine design and test firing.">View Documentation</a>
+        </div>
+        
+        <div class="project-item">
+            <h4>Surface Materials Science: Hydrogen Embrittlement Reduction in Pipeline Steel</h4>
+            <p>Research on reducing hydrogen embrittlement in pipeline steel through surface treatment methods.</p>
+            <a href="pdfviewer.html?pdf=NRC_Technical_Report.pdf&title=Hydrogen Embrittlement Research&desc=Technical report on hydrogen embrittlement reduction in pipeline steel.">View Report</a>
+        </div>
+        
+        <h3>Physics Papers</h3>
+        <p>A collection of physics papers written during my university studies:</p>
+        <ul class="physics-papers">
+            <li>
+                <a href="pdfviewer.html?pdf=X_Ray_Diffraction.pdf&title=X-Ray Diffraction&desc=Research paper on X-Ray Diffraction techniques and applications.">X-Ray Diffraction</a>
+            </li>
+            <li>
+                <a href="pdfviewer.html?pdf=TCI_Report.pdf&title=Superconductivity in TCIs&desc=Research on superconductivity in Topological Crystalline Insulators.">Superconductivity in Topological Crystalline Insulators</a>
+            </li>
+            <li>
+                <a href="pdfviewer.html?pdf=Skin_Depth_Lab_Report.pdf&title=Skin Depth&desc=Laboratory report on skin depth measurements and analysis.">Skin Depth</a>
+            </li>
+            <li>
+                <a href="pdfviewer.html?pdf=Optical_Pumping_Lab_Report.pdf&title=Optical Pumping in Rubidium&desc=Laboratory report on optical pumping techniques in rubidium.">Optical Pumping in Rubidium</a>
+            </li>
+            <li>
+                <a href="pdfviewer.html?pdf=Chaotic_Circuit.pdf&title=Chaotic Circuits Study&desc=Research paper on chaotic circuits and their applications.">Chaotic Circuits Study</a>
+            </li>
+        </ul>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -16,9 +16,10 @@
     <!-- Desktop Menu -->
     <nav class="main-menu">
         <ul class="main-menu-list">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html">Projects</a></li>
+            <li><a href="readwise.html" class="active">Read-list</a></li>
+            <li><a href="work.html" >Projects</a></li>
             <li><a href="writings.html">Blog</a></li>
         </ul>
     </nav>
@@ -33,47 +34,93 @@
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
         <ul class="mobile-menu-list">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="readwise.html" >Read-list</a></li>
             <li><a href="work.html">Projects</a></li>
             <li><a href="writings.html">Blog</a></li>
         </ul>
     </nav>
-
-            <!-- Main content area -->
-            <div class="content">
-                <div class="header">
-                    <h1>Readwise</h1>
-                </div>
-                
-                <!-- Content from original readwise page -->
-                <p>Coming soon - a collection of my favorite book highlights and notes.</p>
-                
-                <!-- Placeholder for future content -->
-                <h3>Recent Highlights</h3>
-                <p>This section will contain my recent book highlights and notes from Readwise.</p>
-                
-                <!-- Placeholder for categories -->
-                <h3>Categories</h3>
-                <ul>
-                    <li>Science & Technology</li>
-                    <li>Engineering</li>
-                    <li>Nuclear Energy</li>
-                    <li>Physics</li>
-                    <li>Philosophy</li>
-                </ul>
-                
-                <!-- Placeholder image -->
-                <img src="20220619_075904.jpg" alt="Banner image" class="full-width-image">
-            </div>
-        </div>
-    </div>
+           
+    <!-- Main content area -->
+    <main class="content">
+        <br><br>
+        <h2 class="work-page">Reading List</h2>
+        <ul>
+            <li>The beginning of infinity by David Deutsch</li>
+            <li>The art of doing science and engineering by Richard Hamming</li>
+            <li>Systems medicine by Humbert Lagast</li>
+            <li>Huygens: The Man Behind the Principle by C.D. Andriesse</li>
+            <li>Thinking in systems by Donella Meadows</li>
+            <li>The structure of scientific Revolution by Thomas Kuhn</li>
+            <li>Classical Physics by Blandford</li>
+            <li>Dealers of lightning by Michael Hiltzik</li>
+            <li>Nanosystems by Eric Drexler</li>
+            <li>Pieces of the action by Vannevar Bush</li>
+            <li>Principles by Ray Dalio</li>
+            <li>Ignition by John Clark</li>
+            <li>A mind at play by Jimmy Soni</li>
+            <li>I am a strange loop by Douglas Hofstadter</li>
+            <li>Leviathan by Thomas Hobbes</li>
+            <li>The complete works of Nietzsche</li>
+            <li>The complete works of Aristotle</li>
+            <li>Gödel Escher Bach by Douglas Hofstadter</li>
+            <li>Nonlinear dynamics and chaos by Steven Strogatz</li>
+            <li>Every life is on fire by Jeremy England</li>
+            <li>Code by Charles Petzold</li>
+            <li>Jade City by Fonda Lee</li>
+            <li>Dude of 5 rings by Miyamoto Musashi</li>
+            <li>The Boer War by Thomas Pakenham</li>
+            <li>Men and rubber by John Tully</li>
+            <li>The grid by Julie Cohn</li>
+            <li>Energy and civilization by Vaclav Smil</li>
+            <li>Siddhartha by Hermann Hesse</li>
+            <li>India's nuclear bomb by George Perkovich</li>
+            <li>The making of the Indian atomic bomb by Itty Abraham</li>
+            <li>Special relativity and classical field theory by Leonard Susskind</li>
+            <li>Parallel Lives by Plutarch</li>
+            <li>How big things get done by Bent Flyvbjerg</li>
+            <li>Turing's cathedral by George Dyson</li>
+            <li>Introduction to the theory of computation by Michael Sipser</li>
+            <li>Industrial megaprojects by Edward Merrow</li>
+            <li>The hard thing about hard things by Ben Horowitz</li>
+            <li>How NASA builds teams by Charles Pellerin</li>
+            <li>Escaping gravity by Lori Garver</li>
+            <li>7 Powers by Hamilton Helmer</li>
+            <li>The making of the atomic bomb by Richard Rhodes</li>
+            <li>The perfect machine by Ronald Florence</li>
+            <li>Ashtavakra Gita</li>
+            <li>Yoga Vasishta</li>
+            <li>Doing the impossible by Arthur Small</li>
+            <li>Confessions of an economic hitman by John Perkins</li>
+            <li>Digital Apollo by David Mindell</li>
+            <li>Skunk Works by Ben Rich</li>
+            <li>Focus the ASML way by René Raaijmakers</li>
+            <li>The science and engineering of microelectronic fabrication by Stephen Campbell</li>
+            <li>Manufacturing Processes for Design Professionals by Rob Thompson</li>
+            <li>A monetary and fiscal history of USA by Allan Meltzer</li>
+            <li>The goal by Eliyahu Goldratt</li>
+            <li>The Man from the Future: The Visionary Life of John Von Neumann by Ananyo Bhattacharya</li>
+            <li>Machine tool practices by Richard Kibbe</li>
+            <li>Engineering of power systems economics by Rui Castro</li>
+            <li>Energy economics by Peter Schwarz</li>
+            <li>The wealth of Nations by Adam Smith</li>
+            <li>Theories of games and economic behavior by Von Neumann</li>
+            <li>Factory physics by Wallace Hopp</li>
+            <li>The prize by Daniel Yergin</li>
+            <li>Henry Kaiser by Mark Foster</li>
+            <li>Henry J. Kaiser: Western Colossus by Albert Heiner</li>
+            <li>Fabric of reality by David Deutsch</li>
+            <li>Theory of Everything by David Deutsch</li>
+            <li>Freedom's Forge by Arthur Herman</li>
+        </ul>
+    </main>
 
     <!-- JavaScript for toggling mobile menu -->
     <script>
-        function toggleMenu() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
         }
     </script>
 </body>

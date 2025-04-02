@@ -250,6 +250,11 @@ h2::before {
     --gradient-end: #0099d1;
 }
 
+.read-page h2 {
+    --gradient-start: #d340e0;
+    --gradient-end: #d10000;
+}
+
 h1, h3 {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -342,9 +347,10 @@ h3 {
 
 .article-image {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
+    height: 50vw; /* Adjust this value to control the height */
+    max-height: 400px; /* Optional: set a maximum height */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    object-position: center; /* Centers the image within its container */
 }
 
 .article-info {
@@ -445,4 +451,133 @@ h3 {
         grid-template-columns: 1fr;
         padding: 1rem;
     }
+}
+
+p {
+    line-height: 1.6;  /* You can adjust this value as needed */
+}
+
+.recent-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* PDF Viewer Styles */
+.pdf-container {
+    width: 100%;
+    height: 85vh;
+    margin: 20px 0;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.pdf-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pdf-title-container {
+    flex: 1;
+}
+
+.pdf-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    background: linear-gradient(45deg, 
+        var(--gradient-start, #40E0D0), 
+        var(--gradient-end, #0099d1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.pdf-description {
+    margin-bottom: 10px;
+    color: #aab0bd;
+}
+
+.pdf-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.pdf-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.pdf-button:hover {
+    background-color: #666;
+}
+
+@media (max-width: 768px) {
+    .pdf-container {
+        height: 70vh;
+    }
+    
+    .pdf-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+.project-section {
+    margin: 4rem 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.image-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.image-caption {
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
 }
