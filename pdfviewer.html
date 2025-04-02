@@ -42,10 +42,11 @@
             <li><a href="writings.html">Blog</a></li>
         </ul>
     </nav>
-    <!-- Hero Section with Fixed Size Image (optional) -->
+
+    <!-- Hero Section with Dynamic Image -->
     <div class="hero-container">
-        <img src="blackboard berkley.jpg" alt="Hero Image" class="hero-image">
-        <h1 class="hero-heading">Technical Writing</h1>
+        <img id="hero-image" alt="Hero Image" class="hero-image">
+        <h1 id="hero-heading" class="hero-heading"></h1>
     </div>
 
     <!-- Content Area -->
@@ -81,6 +82,43 @@
         const pdfPath = url.searchParams.get('pdf') || 'NRC_Technical_Report.pdf';
         const pdfTitle = url.searchParams.get('title') || 'Technical Document';
         const pdfDescription = url.searchParams.get('desc') || 'View the document online';
+        
+        // Map PDFs to their corresponding images and headings from work.html
+        const pdfImageMap = {
+            'reactor_vessel.pdf': {
+                image: 'WardZero front.jpg',
+                heading: 'Nuclear Reactor Pressure Vessel'
+            },
+            'reactor_core.pdf': {
+                image: 'core barrel sheel.jpg',
+                heading: 'Nuclear Reactor Core'
+            },
+            'Optical_Pumping_Lab_Report.pdf': {
+                image: 'laser lab img.jpg',
+                heading: 'Optical Pumping Research'
+            },
+            'Skin_Depth_Lab_Report.pdf': {
+                image: 'oscilloscope img.jpg',
+                heading: 'Electromagnetic Skin Depth Analysis'
+            },
+            'TCI_Report.pdf': {
+                image: 'TCI img.jpg',
+                heading: 'Topological Crystalline Insulators'
+            },
+            'X_Ray_Diffraction.pdf': {
+                image: 'xray_diffraction_machine.jpg',
+                heading: 'X-Ray Diffraction Analysis'
+            },
+            'NRC_Technical_Report.pdf': {
+                image: 'NRC_lab_img.jpg',
+                heading: 'Materials Science Research'
+            }
+        };
+
+        // Set hero image and heading based on PDF
+        const pdfInfo = pdfImageMap[pdfPath] || { image: 'blackboard berkley.jpg', heading: pdfTitle };
+        document.getElementById('hero-image').src = pdfInfo.image;
+        document.getElementById('hero-heading').textContent = pdfInfo.heading;
         
         document.getElementById('pdf-title').textContent = pdfTitle;
         document.getElementById('pdf-description').textContent = pdfDescription;
