@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishaan Aggarwal - Heat Sink Engine</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-initials">
+            <a href="index.html">IA</a>
+        </div>
+    </header>
+
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html" class="active">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="readwise.html">Read-list</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="writings.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <img src="WardZero front.jpg" alt="Valar Work" class="hero-image">
+        <h1 class="hero-heading">Nuclear Reactor: Valar</h1>
+    </div>
+
+    <main class="content">
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>I led the design and construction of the nuclear reactor vessel, and nuclear core, taking full responsibility for the graphite core, Section 8 vessel, and core supports. This project required expertise in high-temperature materials, structural integrity, and precision manufacturing. From concept to completion, I handled every stage, ensuring the successful assembly and integration of critical components.</p>
+            
+            <p>Beyond design and construction, I managed the  execution phase, coordinating with fabrication teams, conducting quality assurance checks, and ensuring compliance with regulatory requirements. Testing and verification involved pressure tests, thermal performance assessments, and neutron flux measurements to confirm the reactor's operational readiness. The successful completion of this project demonstrates advanced nuclear engineering capabilities and paves the way for scalable, high-temperature nuclear energy applications.</p>
+
+        </section>
+
+        <section class="project-section">
+            <h2>Graphite Core</h2>
+            <p>The graphite core serves as the reactor's neutron moderator, essential for maintaining a controlled chain reaction. I designed the core geometry to optimize neutron moderation while ensuring structural stability under high temperatures. Material selection was crucial, requiring graphite with high purity, thermal conductivity, and radiation resistance. Once the design was finalized, I oversaw the fabrication process, working with machinists to ensure precise tolerances. The assembly involved securing individual graphite blocks, aligning coolant and fuel channels, and validating the structure against thermal and mechanical stresses. I also conducted testing to confirm neutron flux distribution and heat dissipation performance.</p>
+        </section>
+
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="graphite packed reactor.jpg" alt="graphite packed reactor">
+                <div class="image-caption">fully packed nuclear graphite core</div>
+            </div>
+            <div class="image-card">
+                <img src="graphite layer.jpg" alt="Close-up view of graphite layer">
+                <div class="image-caption">Close up view of the graphite layer</div>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>Reactor Vessel </h2>
+            <p>The Section 8 vessel houses the reactor core and serves as a primary pressure boundary. I designed the vessel to withstand extreme temperatures and pressures, ensuring compliance with ASME Section VIII standards. This involved selecting high-temperature alloys, performing stress and fatigue analysis, and optimizing the vessel shape for structural integrity. Fabrication required precision welding and rigorous quality inspections. I supervised the manufacturing process, ensuring weld integrity, dimensional accuracy, and compliance with safety regulations. The final assembly involved mounting the vessel, securing internal structures, and conducting pressure tests to validate performance under operational conditions.</p>
+
+    
+
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="rpv moving.jpg" alt="Transport of Pressure Vessel">
+                    <div class="image-caption">Transport of Pressure Vessel</div>
+                </div>
+                <div class="image-card">
+                    <img src="rpv hydrotest.jpg" alt="Hydrotest of Pressure Vessel">
+                    <div class="image-caption">Hydrotest of the Pressure Vessel</div>
+                </div>
+                <div class="image-card">
+                    <img src="core barrel sheel.jpg" alt="Core Barrel">
+                    <div class="image-caption">Nuclear Vessel Overview</div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
