@@ -79,44 +79,46 @@
         
         // PDF.js viewer implementation
         const url = new URL(window.location.href);
-        const pdfPath = url.searchParams.get('pdf') || 'NRC_Technical_Report.pdf';
+        const pdfParam = url.searchParams.get('pdf') || 'NRC_Technical_Report.pdf';
+        // Prepend pdfs/ folder prefix (links pass bare filename as ?pdf= param)
+        const pdfPath = pdfParam.startsWith('pdfs/') ? pdfParam : 'pdfs/' + pdfParam;
         const pdfTitle = url.searchParams.get('title') || 'Technical Document';
         const pdfDescription = url.searchParams.get('desc') || 'View the document online';
-        
+
         // Map PDFs to their corresponding images and headings from work.html
         const pdfImageMap = {
             'reactor_vessel.pdf': {
-                image: 'WardZero front.jpg',
+                image: 'images/WardZero front.jpg',
                 heading: 'Nuclear Reactor Pressure Vessel'
             },
             'reactor_core.pdf': {
-                image: 'core barrel sheel.jpg',
+                image: 'images/core barrel sheel.jpg',
                 heading: 'Nuclear Reactor Core'
             },
             'Optical_Pumping_Lab_Report.pdf': {
-                image: 'laser lab img.jpg',
+                image: 'images/laser lab img.jpg',
                 heading: 'Optical Pumping Research'
             },
             'Skin_Depth_Lab_Report.pdf': {
-                image: 'oscilloscope img.jpg',
+                image: 'images/oscilloscope img.jpg',
                 heading: 'Electromagnetic Skin Depth Analysis'
             },
             'TCI_Report.pdf': {
-                image: 'TCI img.jpg',
+                image: 'images/TCI img.jpg',
                 heading: 'Topological Crystalline Insulators'
             },
             'X_Ray_Diffraction.pdf': {
-                image: 'xray_diffraction_machine.jpg',
+                image: 'images/xray_diffraction_machine.jpg',
                 heading: 'X-Ray Diffraction Analysis'
             },
             'NRC_Technical_Report.pdf': {
-                image: 'NRC_lab_img.jpg',
+                image: 'images/NRC_lab_img.jpg',
                 heading: 'Materials Science Research'
             }
         };
 
-        // Set hero image and heading based on PDF
-        const pdfInfo = pdfImageMap[pdfPath] || { image: 'blackboard berkley.jpg', heading: pdfTitle };
+        // Set hero image and heading based on PDF (use bare filename as map key)
+        const pdfInfo = pdfImageMap[pdfParam] || { image: 'images/blackboard berkley.jpg', heading: pdfTitle };
         document.getElementById('hero-image').src = pdfInfo.image;
         document.getElementById('hero-heading').textContent = pdfInfo.heading;
         
