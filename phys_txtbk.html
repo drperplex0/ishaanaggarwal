@@ -3,109 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishaan Aggarwal - Reading List</title>
-    <link rel="stylesheet" href="css/global.css">
+    <title>Physics Stack — Ishaan Aggarwal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="reading-list-page">
-    <header class="site-header">
-        <div class="site-initials">
-            <a href="index.html">IA</a>
-        </div>
-    </header>
+<body>
+<div class="wrap">
 
-    <!-- Desktop Menu -->
-    <nav class="main-menu">
-        <ul class="main-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html" class="active">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
-    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="site-head">
+        <span class="site-name"><a href="index.html">Ishaan Aggarwal</a></span>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="work.html">Projects</a>
+            <a href="writings.html" class="active">Writing</a>
+            <a href="readwise.html">Reading</a>
+        </nav>
     </div>
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
+    <a href="writings.html" class="back">&larr; Writing</a>
 
-    <!-- Hero Section with Fixed Size Image -->
-    <div class="hero-container">
-        <img src="images/sfu_library.jpg" alt="Hero Image" class="hero-image">
-        <h1 class="hero-heading">Textbook List</h1>
+    <div class="page-title">
+        <h1>Physics Stack</h1>
+        <p class="subtitle">Textbooks that built my understanding of physics and mathematics</p>
     </div>
 
-    <!-- Content Area -->
-    <main class="content">
-        <br><br>
-        <h2 class="index-page">Academic Reading List</h2>
-        <p>These are the books that shaped my understanding of physics and mathematics throughout my academic journey.</p>
-        
-        <h3>The Books That Built My Foundation</h3>
-        <br>
-        
-        <p><b>Mathematics</b></p>
-        <ul>
-            <li><i>Calculus: Early Transcendentals</i> by James Stewart</li>
-            <li><i>Differential Equations and Linear Algebra</i> by Gilbert Strang</li>
-        </ul>
-        
-        <p><b>Core Physics</b></p>
-        <ul>
-            <li><i>Introduction to Electrodynamics</i> by David J. Griffiths</li>
-            <li><i>Classical Mechanics</i> by Herbert Goldstein, Charles P. Poole Jr., and John L. Safko</li>
-            <li><i>The Physics of Waves</i> by Howard Georgi
-                <ul>
-                    <li>Where my perspective on physics really changed</li>
-                </ul>
-            </li>
-        </ul>
-        
-        <p><b>Quantum Mechanics</b></p>
-        <ul>
-            <li><i>Principles of Quantum Mechanics</i> by R. Shankar</li>
-            <li><i>Introduction to Quantum Mechanics</i> by David J. Griffiths</li>
-            <li><i>A Modern Approach to Quantum Mechanics</i> by John S. Townsend</li>
-        </ul>
-        
-        <p><b>Thermodynamics & Statistical Mechanics</b></p>
-        <ul>
-            <li>Thermodynamics: 3 books cause this topic go crazy
-                <ul>
-                    <li><i>Thermal Physics</i> by Ralph Baierlein</li>
-                    <li><i>Statistical Mechanics</i> by Kerson Huang (not fully thermo but has good thermo chapters)</li>
-                    <li><i>Thermodynamics: An Engineering Approach</i> by Yunus A. Çengel and Michael A. Boles</li>
-                </ul>
-            </li>
-        </ul>
-        
-        <p><b>Advanced Topics</b></p>
-        <ul>
-            <li><i>Introduction to Special Relativity</i> by Robert Resnick</li>
-            <li><i>Fluid Mechanics</i> by L.D. Landau and E.M. Lifshitz</li>
-            <li><i>Solid State Physics</i> by Neil W. Ashcroft and N. David Mermin</li>
-        </ul>
-    </main>
+    <h3>Mathematics</h3>
+    <ul class="reading-list">
+        <li><em>Calculus: Early Transcendentals</em> — James Stewart</li>
+        <li><em>Differential Equations and Linear Algebra</em> — Gilbert Strang</li>
+    </ul>
 
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('active');
-        }
-    </script>
+    <h3>Core Physics</h3>
+    <ul class="reading-list">
+        <li><em>Introduction to Electrodynamics</em> — David J. Griffiths</li>
+        <li><em>Classical Mechanics</em> — Goldstein, Poole, Safko</li>
+        <li><em>The Physics of Waves</em> — Howard Georgi &mdash; <span style="color:#888;font-size:0.85rem">where my perspective on physics really changed</span></li>
+    </ul>
 
+    <h3>Quantum Mechanics</h3>
+    <ul class="reading-list">
+        <li><em>Principles of Quantum Mechanics</em> — R. Shankar</li>
+        <li><em>Introduction to Quantum Mechanics</em> — David J. Griffiths</li>
+        <li><em>A Modern Approach to Quantum Mechanics</em> — John S. Townsend</li>
+    </ul>
+
+    <h3>Thermodynamics &amp; Statistical Mechanics</h3>
+    <ul class="reading-list">
+        <li><em>Thermal Physics</em> — Ralph Baierlein</li>
+        <li><em>Statistical Mechanics</em> — Kerson Huang</li>
+        <li><em>Thermodynamics: An Engineering Approach</em> — &Ccedil;engel &amp; Boles</li>
+    </ul>
+
+    <h3>Advanced Topics</h3>
+    <ul class="reading-list">
+        <li><em>Introduction to Special Relativity</em> — Robert Resnick</li>
+        <li><em>Fluid Mechanics</em> — Landau &amp; Lifshitz</li>
+        <li><em>Solid State Physics</em> — Ashcroft &amp; Mermin</li>
+    </ul>
+
+</div>
 </body>
 </html>

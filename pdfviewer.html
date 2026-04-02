@@ -3,80 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Ishaan Aggarwal - Document Viewer</title>
-    <link rel="stylesheet" href="css/global.css">
+    <title id="page-title">Ishaan Aggarwal — Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-initials">
-            <a href="index.html">IA</a>
-        </div>
-    </header>
+<div class="wrap">
 
-    <!-- Desktop Menu -->
-    <nav class="main-menu">
-        <ul class="main-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html" class="active">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
-    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="site-head">
+        <span class="site-name"><a href="index.html">Ishaan Aggarwal</a></span>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="work.html">Projects</a>
+            <a href="writings.html">Writing</a>
+            <a href="readwise.html">Reading</a>
+        </nav>
     </div>
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
+    <a id="back-link" href="work.html" class="back">&larr; Back</a>
 
-    <!-- Hero Section with Dynamic Image -->
-    <div class="hero-container">
-        <img id="hero-image" alt="Hero Image" class="hero-image">
-        <h1 id="hero-heading" class="hero-heading"></h1>
+    <div class="page-title">
+        <h1 id="pdf-title">Loading...</h1>
+        <p class="subtitle" id="pdf-description"></p>
     </div>
 
-    <!-- Content Area -->
-    <main class="content">
-        <div class="pdf-header">
-            <div class="pdf-title-container">
-                <h2 class="pdf-title" id="pdf-title">Loading document...</h2>
-                <div class="pdf-description" id="pdf-description">Please wait while the document loads...</div>
-            </div>
-            <button class="pdf-button" id="download-pdf">Download PDF</button>
-        </div>
-        
+    <div class="pdf-wrap">
         <div class="pdf-controls">
-            <button class="pdf-button" id="prev-page">Previous Page</button>
-            <span id="page-info">Page: <span id="page-num"></span> / <span id="page-count"></span></span>
-            <button class="pdf-button" id="next-page">Next Page</button>
+            <button class="pdf-btn" id="prev-page">&#8592; Prev</button>
+            <button class="pdf-btn" id="next-page">Next &#8594;</button>
+            <span class="page-count">Page <span id="page-num">1</span> / <span id="page-count">—</span></span>
+            <button class="pdf-btn" id="download-pdf">Download</button>
         </div>
-        
-        <div class="pdf-container">
+        <div class="pdf-canvas-wrap">
             <canvas id="pdf-render"></canvas>
         </div>
-    </main>
+    </div>
+
+</div>
 
     <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('active');
-        }
-        
+
         // PDF.js viewer implementation
         const url = new URL(window.location.href);
         const pdfParam = url.searchParams.get('pdf') || 'NRC_Technical_Report.pdf';
@@ -117,14 +83,9 @@
             }
         };
 
-        // Set hero image and heading based on PDF (use bare filename as map key)
-        const pdfInfo = pdfImageMap[pdfParam] || { image: 'images/blackboard berkley.jpg', heading: pdfTitle };
-        document.getElementById('hero-image').src = pdfInfo.image;
-        document.getElementById('hero-heading').textContent = pdfInfo.heading;
-        
         document.getElementById('pdf-title').textContent = pdfTitle;
         document.getElementById('pdf-description').textContent = pdfDescription;
-        document.getElementById('page-title').textContent = 'Ishaan Aggarwal - ' + pdfTitle;
+        document.getElementById('page-title').textContent = 'Ishaan Aggarwal — ' + pdfTitle;
         
         // The workerSrc property needs to be specified
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
@@ -253,7 +214,7 @@
         document.getElementById('prev-page').addEventListener('click', onPrevPage);
         document.getElementById('next-page').addEventListener('click', onNextPage);
         document.getElementById('download-pdf').addEventListener('click', downloadPDF);
-        
+
         // Handle window resize
         window.addEventListener('resize', function() {
             adjustScale();

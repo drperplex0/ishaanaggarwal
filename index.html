@@ -3,101 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishaan Aggarwal - Home</title>
-    <link rel="stylesheet" href="css/global.css">
+    <title>Ishaan Aggarwal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-initials">
-            <a href="index.html">IA</a>
-        </div>
-    </header>
+<div class="wrap">
 
-    <nav class="main-menu">
-        <ul class="main-menu-list">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html" >Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
-
-    <!-- Mobile Menu Toggle -->
-    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="site-head">
+        <span class="site-name"><a href="index.html">Ishaan Aggarwal</a></span>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="work.html">Projects</a>
+            <a href="writings.html">Writing</a>
+            <a href="readwise.html">Reading</a>
+        </nav>
     </div>
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
+    <p>Engineer at <a href="https://www.valaratomics.com/">Valar Atomics</a>. Building nuclear reactors.</p>
+    <p>Applied Physics from SFU. Delhi → Dubai → Vancouver → Los Angeles.</p>
 
-    <!-- Hero Section with Fixed Size Image -->
-    <div class="hero-container">
-        <img src="images/20220619_075904.jpg" alt="Hero Image" class="hero-image">
-        <h1 class="hero-heading">This is Ishaan Aggarwal</h1>
-    </div>
+    <hr>
 
-    <main class="content">
-        <p>This is a place for me to spread out my thoughts, projects, book recommendations, and pictures</p>
-        
-        <div class="index-page">
-            <h2 style="text-align: center;">Featured Articles</h2>
-            <div class="featured-grid">
-                <!-- Featured Article 1 -->
-                <a href="ambition.html" class="article-card">
-                    <img src="images/cutting ribbon.jpg" alt="Ambition" class="article-image">
-                    <div class="article-info">
-                        <h3 class="article-title">Ambition</h3>
-                        <p class="article-subtitle">To See How High Can You Fly</p>
-                    </div>
-                </a>
-                
-                <!-- Featured Article 2 -->
-                <a href="work.html" class="article-card">
-                    <img src="images/WardZero front.jpg" alt="WardZero" class="article-image">
-                    <div class="article-info">
-                        <h3 class="article-title">Valar Atomics: WardZero</h3>
-                        <p class="article-subtitle">Building a Nuclear Reactor Prototype</p>
-                    </div>
-                </a>
-                
-                <!-- Featured Article 3 -->
-                <a href="work.html" class="article-card">
-                    <img src="images/blackboard berkley.jpg" alt="Physics Stack" class="article-image">
-                    <div class="article-info">
-                        <h3 class="article-title">Physics Stack</h3>
-                        <p class="article-subtitle">My Knowledge Stack of Physics</p>
-                    </div>
-                </a>
-                
-                <!-- Featured Article 4 -->
-                <a href="work.html" class="article-card">
-                    <img src="images/core barrel sheel.jpg" alt="Transit Plan" class="article-image">
-                    <div class="article-info">
-                        <h3 class="article-title">Transit Predictive Maintenance</h3>
-                        <p class="article-subtitle">A Plan on Improving BC's Transit Org</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </main>
+    <span class="label">Projects</span>
+    <ul class="link-list">
+        <li><a href="valar_work.html">WardZero — Nuclear Reactor Prototype</a><span class="meta">Valar Atomics</span></li>
+        <li><a href="heatsink_engine.html">Heat Sink Engine (7kN)</a><span class="meta">liquid rocket · SFU Rocketry</span></li>
+        <li><a href="ablative_engine.html">Ablative Engine (3kN)</a><span class="meta">liquid rocket · SFU Rocketry</span></li>
+        <li><a href="pdfviewer.html?pdf=NRC_Technical_Report.pdf&title=Hydrogen Embrittlement Research&desc=Technical report on hydrogen embrittlement reduction in pipeline steel">Hydrogen Embrittlement in Pipeline Steel</a><span class="meta">NRC · PDF</span></li>
+        <li><a href="pdfviewer.html?pdf=Optical_Pumping_Lab_Report.pdf&title=Optical Pumping in Rubidium&desc=Investigation of atomic energy levels through optical pumping">Optical Pumping in Rubidium</a><span class="meta">SFU · PDF</span></li>
+        <li><a href="pdfviewer.html?pdf=TCI_Report.pdf&title=Topological Crystalline Insulators&desc=Superconductivity of Topological Crystalline Insulators">Topological Crystalline Insulators</a><span class="meta">SFU · PDF</span></li>
+        <li><a href="pdfviewer.html?pdf=X_Ray_Diffraction.pdf&title=X-Ray Diffraction Analysis&desc=Crystal structure analysis using X-ray diffraction techniques">X-Ray Diffraction Analysis</a><span class="meta">SFU · PDF</span></li>
+        <li><a href="pdfviewer.html?pdf=Skin_Depth_Lab_Report.pdf&title=Electromagnetic Skin Depth&desc=Study of electromagnetic wave penetration in conductors">Electromagnetic Skin Depth</a><span class="meta">SFU · PDF</span></li>
+        <li><a href="pdfviewer.html?pdf=translink_doc.pdf&title=TransLink Predictive Maintenance&desc=A data-driven approach to optimize maintenance operations for BC's transit fleet">TransLink Predictive Maintenance</a><span class="meta">PDF</span></li>
+    </ul>
 
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('active');
-        }
-    </script>
+    <hr>
 
+    <span class="label">Writing</span>
+    <ul class="link-list">
+        <li><a href="ambition.html">Ambition</a></li>
+        <li><a href="industry.html">Industriousness</a></li>
+        <li><a href="phys_txtbk.html">Physics Stack</a><span class="meta">textbook recommendations</span></li>
+    </ul>
+
+    <hr>
+
+    <span class="label">Reading</span>
+    <ul class="link-list">
+        <li><a href="readwise.html">Reading list</a><span class="meta">books I've gone through</span></li>
+    </ul>
+
+</div>
 </body>
 </html>

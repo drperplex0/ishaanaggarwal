@@ -3,95 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishaan Aggarwal - Heat Sink Engine</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/project.css">
+    <title>Heat Sink Engine — Ishaan Aggarwal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-initials">
-            <a href="index.html">IA</a>
-        </div>
-    </header>
+<div class="wrap">
 
-    <nav class="main-menu">
-        <ul class="main-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html" class="active">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
-
-    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="site-head">
+        <span class="site-name"><a href="index.html">Ishaan Aggarwal</a></span>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="work.html" class="active">Projects</a>
+            <a href="writings.html">Writing</a>
+            <a href="readwise.html">Reading</a>
+        </nav>
     </div>
 
-    <nav class="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="readwise.html">Read-list</a></li>
-            <li><a href="work.html">Projects</a></li>
-            <li><a href="writings.html">Blog</a></li>
-        </ul>
-    </nav>
+    <a href="work.html" class="back">&larr; Projects</a>
 
-    <div class="hero-container">
-        <img src="images/Hotfire+SP24+Teaser.jpg" alt="Heat Sink Engine Test Fire" class="hero-image">
-        <h1 class="hero-heading">Heat Sink Engine</h1>
+    <div class="page-title">
+        <h1>Heat Sink Engine (7kN)</h1>
+        <p class="subtitle">Liquid rocket engine — SFU Rocketry</p>
     </div>
 
-    <main class="content">
-        <section class="project-section">
-            <h2>Overview</h2>
-            <p>I was part of the SFU Rocketry team that developed and fired a 2.5kN heatsink rocket engine. In this small team, my responsibilities included designing fluid systems, structural assembly, and managing oxidizer and fuel delivery systems.</p>
-            
-            <p>A significant part of my role involved handling liquid oxygen (LOX), creating safety procedures, and conducting team training. The project combined mechanical engineering, propulsion, and chemical engineering principles.</p>
-        </section>
+    <h2>Overview</h2>
+    <p>I was part of the SFU Rocketry team that developed and fired a 2.5kN heatsink rocket engine. In this small team, my responsibilities included designing fluid systems, structural assembly, and managing oxidizer and fuel delivery systems.</p>
+    <p>A significant part of my role involved handling liquid oxygen (LOX), creating safety procedures, and conducting team training. The project combined mechanical engineering, propulsion, and chemical engineering principles.</p>
 
-        <div class="image-grid">
-            <div class="image-card">
-                <img src="images/lre gen 1_2.png" alt="Rocket engine firing with visible flame">
-                <div class="image-caption">Heat Sink Engine during successful test fire</div>
-            </div>
-            <div class="image-card">
-                <img src="images/lre gen 1.jpeg" alt="Close-up view of rocket engine">
-                <div class="image-caption">Detailed view of the engine assembly</div>
-            </div>
-        </div>
+    <div class="img-grid">
+        <figure>
+            <img src="images/lre gen 1_2.png" alt="Heat Sink Engine during successful test fire">
+            <figcaption>Heat Sink Engine during successful test fire</figcaption>
+        </figure>
+        <figure>
+            <img src="images/lre gen 1.jpeg" alt="Detailed view of the engine assembly">
+            <figcaption>Detailed view of the engine assembly</figcaption>
+        </figure>
+    </div>
 
-        <section class="project-section">
-            <h2>Test Stand Development</h2>
-            <p>I led the construction of a test stand structure for liquid rocket engine testing. Our team innovatively repurposed materials like scuba tanks, adapting them with custom valves for fluid control. We developed cost-effective testing methods using liquid nitrogen for LOX tank calibration.</p>
+    <h2>Test Stand Development</h2>
+    <p>I led the construction of a test stand structure for liquid rocket engine testing. Our team innovatively repurposed materials like scuba tanks, adapting them with custom valves for fluid control. We developed cost-effective testing methods using liquid nitrogen for LOX tank calibration.</p>
 
-            <div class="image-grid">
-                <div class="image-card">
-                    <img src="images/test stand 1.jpeg" alt="Test stand setup">
-                    <div class="image-caption">Complete test stand assembly with control systems</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/test stand 2.png" alt="Test stand with engine">
-                    <div class="image-caption">Engine integration with test stand</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/test stand background.jpeg" alt="Test stand overview">
-                    <div class="image-caption">Full test stand configuration</div>
-                </div>
-            </div>
-        </section>
+    <div class="img-grid">
+        <figure>
+            <img src="images/test stand 1.jpeg" alt="Complete test stand assembly with control systems">
+            <figcaption>Complete test stand assembly with control systems</figcaption>
+        </figure>
+        <figure>
+            <img src="images/test stand 2.png" alt="Engine integration with test stand">
+            <figcaption>Engine integration with test stand</figcaption>
+        </figure>
+        <figure>
+            <img src="images/test stand background.jpeg" alt="Full test stand configuration">
+            <figcaption>Full test stand configuration</figcaption>
+        </figure>
+    </div>
 
-        
-    </main>
-
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('active');
-        }
-    </script>
+</div>
 </body>
 </html>
