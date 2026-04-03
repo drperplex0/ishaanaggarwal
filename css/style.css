@@ -33,7 +33,7 @@ body {
 }
 
 .site-name a {
-    font-size: 1.4rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #111;
     text-decoration: none;
@@ -63,7 +63,7 @@ nav a.active { color: #111; }
 
 /* ── Typography ── */
 h1 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.4px;
     margin: 0 0 6px;
